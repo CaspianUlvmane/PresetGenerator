@@ -43,7 +43,6 @@ class ComposerStaticInit8116c249f0b4dbcd995d077b53ca826b
         ),
         'S' => 
         array (
-            'Symfonycasts\\TailwindBundle\\' => 28,
             'Symfony\\UX\\Turbo\\' => 17,
             'Symfony\\UX\\StimulusBundle\\' => 26,
             'Symfony\\Runtime\\Symfony\\Component\\' => 34,
@@ -184,10 +183,6 @@ class ComposerStaticInit8116c249f0b4dbcd995d077b53ca826b
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
-        ),
-        'Symfonycasts\\TailwindBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfonycasts/tailwind-bundle/src',
         ),
         'Symfony\\UX\\Turbo\\' => 
         array (
