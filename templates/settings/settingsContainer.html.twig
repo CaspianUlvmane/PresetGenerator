@@ -1,11 +1,14 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-	<div id="settings">
-		{% for setting in settings %}
-			<h2>{{setting["SettingName"]}}</h2>
-			<ul>
-				{{ component('SettingsItem', {settings: setting})}}
+	<div data-controller="minimize" class="flex flex-col p-12" id="settings">
+		{% for setting, value in settings %}
+			<div class="flex align-middle">
+				<h2 class="text-5xl p-6">{{settings[setting]["SettingName"]}}</h2>
+				<input type="checkbox" name={{settings[setting]["SettingName"]}} data-action="input->minimize#minimize">
+			</div>
+			<ul id={{settings[setting]["SettingName"]}}>
+				{{ component('SettingsItem', {settings: settings[setting]})}}
 			</ul>
 		{% endfor %}
 	</div>

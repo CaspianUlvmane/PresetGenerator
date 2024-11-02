@@ -1,10 +1,27 @@
 {% for setting, value in settings %}
-	<pre>
-</pre>
+
 	{% if setting != "SettingName" %}
 		<li>
-			<label for={{setting}}>{{value}}</label>
-			<input type="range" name={{setting}}>
+			<label for={{setting}}>{{setting}}</label>
+			{% if value is iterable %}
+				<select name={{setting}}>
+					{% for item in value %}
+						<option style="font-family:" {{item}} value={{item}}>{{item}}</option>
+					{% endfor %}
+				</select>
+			{% elseif value matches '/^[-+]?[0-9]*\\.?[0-9]+$/' %}
+				<input type="range" name={{setting}}>
+
+			{% elseif value == false or value == true %}
+				<input type="radio" name={{setting}} value='1'>
+				<label for="">Enable</label>
+				<input type="radio" name={{setting}} value='0' checked="checked">
+				<label for="">Disable</label>
+
+			{% else %}
+				<input type="Text" name={{setting}}>
+
+			{% endif %}
 		</li>
 	{% endif %}
 {% endfor %}
