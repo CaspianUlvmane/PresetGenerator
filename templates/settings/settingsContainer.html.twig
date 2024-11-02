@@ -1,2 +1,15 @@
-{% extends 'base.html.twig' %}
+{% extends "base.html.twig" %}
 
+{% block body %}
+	<div id="settings">
+		{% for setting in settings %}
+			<h2>{{setting["SettingName"]}}</h2>
+			<ul>
+				{{ component('SettingsItem', {settings: setting})}}
+			</ul>
+		{% endfor %}
+	</div>
+	<div id="export">
+		<button>Export Template</button>
+	</div>
+{% endblock %}

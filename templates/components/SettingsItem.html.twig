@@ -1,0 +1,10 @@
+{% for setting, value in settings %}
+	<pre>
+</pre>
+	{% if setting != "SettingName" %}
+		<li>
+			<label for={{setting}}>{{value}}</label>
+			<input type="range" name={{setting}}>
+		</li>
+	{% endif %}
+{% endfor %}
