@@ -10,19 +10,19 @@ import { Controller } from "@hotwired/stimulus";
  * Delete this file or adapt it for your use!
  */
 export default class extends Controller {
-  connect() {
-    this.minimize();
-  }
+  static targets = ["input", "hide"];
 
-  minimize() {
-    console.log(this);
+  toggle(event) {
+    console.log(event.target.name);
+    let target = document.getElementById(event.target.name);
+    console.log(target);
 
-    if (this.inputTarget.checked) {
-      //   this.hidemeTarget.style.display = "block";
+    if (event.target.checked) {
+      target.style.height = "100%";
       console.log("checked");
     } else {
       console.log("not checked");
-      //   document.getElementById(id).style.height = "0px";
+      target.style.height = "0%";
     }
   }
 }
