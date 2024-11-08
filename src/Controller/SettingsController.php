@@ -21,7 +21,7 @@ class SettingsController extends AbstractController
                 "Green1" => 1,
                 "Blue1" => 1,
                 // Bold, italic etc
-                "Style" => ["Bold", "Italic"],
+                "Style" => ["Regular", "Bold", "Italic"],
                 // Font size
                 "Size" => 1,
                 "Opacity1" => 1,
@@ -30,36 +30,36 @@ class SettingsController extends AbstractController
                 "CenterY" => 3,
                 // Outlines
                 "Enabled2" => false,
-                "Enabled3" => false,
-                "Enabled4" => false,
+
+
                 // Outline rules
                 "Red2" => 1,
                 "Green2" => 0,
                 "Blue2" => 0,
+                "SoftnessX2" => 1,
+                "SoftnessY2" => 1,
+                "Thickness2" => 1,
+                "ElementShape2" => 1,
+                "Opacity2" => 1,
+
+                "Enabled3" => false,
                 "Red3" => 0,
                 "Green3" => 0,
                 "Blue3" => 0,
+                "SoftnessX3" => 0.5,
+                "SoftnessY3" => 0.5,
+                "Thickness3" => 1,
+                "ElementShape3" => 1,
+                "Opacity3" => 1,
+
+                "Enabled4" => false,
                 "Red4" => 1,
                 "Green4" => 0,
                 "Blue4" => 1,
-
-                "SoftnessX2" => 1,
-                "SoftnessY2" => 1,
-                "SoftnessX3" => 0.5,
-                "SoftnessY3" => 0.5,
                 "SoftnessX4" => 1,
                 "SoftnessY4" => 1,
-
-                "Thickness2" => 1,
-                "Thickness3" => 1,
                 "Thickness4" => 1,
-
-                "ElementShape2" => 1,
-                "ElementShape3" => 1,
                 "ElementShape4" => 1,
-
-                "Opacity2" => 1,
-                "Opacity3" => 1,
                 "Opacity4" => 1,
             ],
             "FastNoise" => [

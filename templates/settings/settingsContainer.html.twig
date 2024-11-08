@@ -5,7 +5,7 @@
 		{% for setting, value in settings %}
 			<div class="flex align-middle">
 				<h2 class="text-5xl p-6">{{settings[setting]["SettingName"]}}</h2>
-				<input data-action="input->toggler#toggle" data-target="toggler.input" type="checkbox" name="{{settings[setting]["SettingName"]}}">
+				<input class="openSettings" data-action="input->toggler#toggle" data-target="toggler.input" type="checkbox" name="{{settings[setting]["SettingName"]}}">
 			</div>
 			<ul data-target="toggler.hide" class="overflow-hidden transition-all" id={{settings[setting]["SettingName"]}}>
 				{{ component('SettingsItem', {settings: settings[setting]})}}

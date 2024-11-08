@@ -1,7 +1,7 @@
 {% for setting, value in settings %}
 
 	{% if setting != "SettingName" %}
-		<li>
+		<li class="overflow-hidden">
 			<label for={{setting}}>{{setting}}</label>
 			{% if value is iterable %}
 				<select name={{setting}}>
@@ -13,9 +13,9 @@
 				<input type="range" name={{setting}}>
 
 			{% elseif value == false or value == true %}
-				<input type="radio" name={{setting}} value='1'>
+				<input data-action="input->toggler#toggleOptions" type="radio" name={{setting}} value='1'>
 				<label for="">Enable</label>
-				<input type="radio" name={{setting}} value='0' checked="checked">
+				<input data-action="input->toggler#toggleOptions" type="radio" name={{setting}} value='0' checked="checked">
 				<label for="">Disable</label>
 
 			{% else %}
